@@ -27,3 +27,9 @@ ul {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
+
+@include media-breakpoint-up(md) {
+  .bg-image {
+    display: block;
+  }
+}
