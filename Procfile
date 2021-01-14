@@ -1,1 +1,1 @@
-web: python manage.py runserver 0.0.0.0:$PORT
+web: python brodiehay.ddns.net/manage.py runserver 24.108.172.104:$PORT
