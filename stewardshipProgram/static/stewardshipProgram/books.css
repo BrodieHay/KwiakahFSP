@@ -26,3 +26,7 @@
     background-color: #5A4181 !Important;
     border: solid 1px #5A4181;
 }
+
+.carousel-inner > .item {
+   height: 200px;
+}
