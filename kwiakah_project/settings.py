@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
-    'kwiakahfsp.herokuapp.com'
+    'kwiakahfsp.herokuapp.com',
 ]
 
 
