@@ -1,6 +1,6 @@
 {% extends "stewardshipProgram/books.html"%}
 {% block carousel %}
-
+<indent>
 {% for pictures in aHealthyForest %}
     {% if forloop.first %}
       <div class="carousel-item active">
@@ -12,8 +12,7 @@
       </div>
     {% endif %}
 {% endfor %}
-</div>
-
+</indent>
 {% endblock carousel %}
 
 {% block books %}
