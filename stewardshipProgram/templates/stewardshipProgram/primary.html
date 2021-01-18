@@ -1,9 +1,9 @@
 {% extends "stewardshipProgram/books.html"%}
 {% block carousel %}
 <indent>
-{% with var=0 %}
+{% with var = 0 %}
 {% for pictures in aHealthyForest %}
-{% if var==0 %}
+{% if var is 0 %}
   <div class="carousel-item active">
     <img src="{{pictures.image}}" class="d-block w-100" alt="...">
   </div>
