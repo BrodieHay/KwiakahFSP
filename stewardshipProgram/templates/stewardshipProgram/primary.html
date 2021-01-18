@@ -1,10 +1,8 @@
 {% extends "stewardshipProgram/books.html"%}
 {% block carousel %}
-<div class="carousel-item active">
-  <img src="{{aHealthyForest[0]}}" class="d-block w-100" alt="...">
-</div>
-{% for image+1 in aHealthyForest %}
-    <div class="carousel-item">
+
+{% for image in aHealthyForest %}
+    <div class="carousel-item active">
       <img src="{{image.image}}" class="d-block w-100" alt="...">
     </div>
 {% endfor %}
