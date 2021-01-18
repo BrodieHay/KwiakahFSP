@@ -19,7 +19,10 @@ def home(request):
     return render(request, 'stewardshipProgram/home.html')
 
 def primary(request):
-    return render(request, 'stewardshipProgram/primary.html')
+    context = {
+        'aHealthyForest' = aHealthyForest
+    }
+    return render(request, 'stewardshipProgram/primary.html', context)
 
 def preschool(request):
     return render(request, 'stewardshipProgram/preschool.html')
