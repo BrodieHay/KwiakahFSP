@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-aHealthyForest = [{'image': "https://t.ly/a0XY"},
-{'image': "https://t.ly/MIXy"},
-{'image': "https://t.ly/V7pQ"}]
+aHealthyForest = [
+    {'image': "https://t.ly/a0XY"},
+    {'image': "https://t.ly/MIXy"},
+    {'image': "https://t.ly/V7pQ"}]
 dirtAndRoots1 = [{}]
 dirtAndRoots2 = [{}]
 forestFloor1 = [{}]
