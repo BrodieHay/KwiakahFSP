@@ -1,7 +1,7 @@
 {% extends "stewardshipProgram/books.html"%}
 {% block carousel %}
 <indent>
-{% var=0 %}
+{% with var=0 %}
 {% for pictures in aHealthyForest %}
 {% if var==0 %}
   <div class="carousel-item active">
@@ -14,6 +14,7 @@
   </div>
 {% endif %}
 {% endfor %}
+{% endwith %}
 </indent>
 {% endblock carousel %}
 
