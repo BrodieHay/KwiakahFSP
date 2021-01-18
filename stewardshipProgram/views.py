@@ -20,7 +20,7 @@ def home(request):
 
 def primary(request):
     context = {
-        'aHealthyForest' = aHealthyForest
+        'aHealthyForest' : aHealthyForest
     }
     return render(request, 'stewardshipProgram/primary.html', context)
 
