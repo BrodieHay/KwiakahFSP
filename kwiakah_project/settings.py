@@ -31,6 +31,7 @@ SECRET_KEY = '8(&tm(^y@ehl6v$1zrk$euc^^7-nn(omvkc6*^a+()mm2$65_)'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     '0.0.0.0',
     'kwiakahfsp.herokuapp.com',
     'tranquil-banana-eddzbm0zz66g60izltj8zg7q.herokudns.com'
