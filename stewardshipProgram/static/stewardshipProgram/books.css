@@ -1,7 +1,7 @@
 .nav .nav-link {
   color: #cecece;
   background: #a6a6a6;
-  border: grey;
+  border: solid 1px grey;
 }
 
 .nav .nav-link:hover {
