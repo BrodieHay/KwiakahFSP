@@ -1,14 +1,16 @@
 .nav .nav-link {
-  color: #cbd5db;
-  background: #cecece;
+  color: #cecece;
+  background: grey;
 }
 
 .nav .nav-link:hover {
-  color: #ffffff;
+  color: #a6a6a6;
 }
 
 .nav .nav-link.active {
   font-weight: 500;
+  color: grey;
+  background: #cecece;
 }
 .carousel-inner .item {
    height: 200px;
