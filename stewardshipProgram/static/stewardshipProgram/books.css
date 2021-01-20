@@ -12,6 +12,7 @@
   font-weight: 500;
   color: grey;
   background: #cecece;
+  border: solid 1px grey;
 }
 .carousel-inner .item {
    height: 200px;
