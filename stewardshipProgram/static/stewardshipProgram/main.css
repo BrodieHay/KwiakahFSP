@@ -28,8 +28,8 @@ ul {
   font-weight: 500;
 }
 
-@include media-breakpoint-up(sm) {
-  .bg-image {
-    display: none;
+@include media-breakpoint-up(xs) {
+  .navbar .navbar-brand {
+    font-size: 10;
   }
 }
