@@ -27,9 +27,3 @@ ul {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
-
-@include media-breakpoint-up(xs) {
-  .navbar .navbar-brand {
-    font-size: 10;
-  }
-}
