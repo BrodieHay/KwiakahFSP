@@ -1,9 +1,7 @@
 from django.shortcuts import render
+import os
 
-aHealthyForest = [
-    {'image': "https://t.ly/a0XY"},
-    {'image': "https://t.ly/MIXy"},
-    {'image': "https://t.ly/V7pQ"}]
+aHealthyForest = [{}]
 dirtAndRoots1 = [{}]
 dirtAndRoots2 = [{}]
 forestFloor1 = [{}]
@@ -20,6 +18,8 @@ def home(request):
     return render(request, 'stewardshipProgram/home.html')
 
 def primary(request):
+#    for filename in os.listdir('/stewardshipProgram/images'):
+#        aHealthyForest.append('/stewardshipProgram/images/'+filename)
     context = {
         'aHealthyForest' : aHealthyForest
     }
