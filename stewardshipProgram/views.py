@@ -1,7 +1,10 @@
-from django.shortcuts import render
 import os
+from django.shortcuts import render
+from pathlib import Path
+from django.conf import settings
 
-aHealthyForest = [{}]
+
+aHealthyForest = []
 dirtAndRoots1 = [{}]
 dirtAndRoots2 = [{}]
 forestFloor1 = [{}]
@@ -18,8 +21,8 @@ def home(request):
     return render(request, 'stewardshipProgram/home.html')
 
 def primary(request):
-#    for filename in os.listdir('/stewardshipProgram/images'):
-#        aHealthyForest.append('/stewardshipProgram/images/'+filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images'):
+        aHealthyForest.append(filename)
     context = {
         'aHealthyForest' : aHealthyForest
     }
