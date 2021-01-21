@@ -21,7 +21,7 @@ def home(request):
     return render(request, 'stewardshipProgram/home.html')
 
 def primary(request):
-    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images'):
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
         aHealthyForest.append(filename)
     context = {
         'aHealthyForest' : aHealthyForest
