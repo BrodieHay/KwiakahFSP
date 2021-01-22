@@ -27,6 +27,7 @@ def primary(request):
     context = {
         'aHealthyForest' : aHealthyForest
     }
+    aHealthyForest = []
     return render(request, 'stewardshipProgram/primary.html', context)
 
 def preschool(request):
