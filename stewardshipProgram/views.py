@@ -23,6 +23,7 @@ def home(request):
 def primary(request):
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
         aHealthyForest.append(filename)
+    aHealthyForest.sort()
     context = {
         'aHealthyForest' : aHealthyForest
     }
