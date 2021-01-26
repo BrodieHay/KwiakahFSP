@@ -1,6 +1,7 @@
 {% extends "stewardshipProgram/books.html"%}
 {% load static %}
 {% block carousel %}
+<div class="ratio" style="--aspect-ratio: 63%;">
 <div id="bookCarousel" class="carousel carousel-dark slide" data-bs-interval="false" data-bs-ride="carousel">
   <div class="carousel-inner">
     <indent>
@@ -26,6 +27,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </a>
+</div>
 </div>
 {% endblock carousel %}
 
