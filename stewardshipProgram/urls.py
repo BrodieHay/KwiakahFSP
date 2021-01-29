@@ -6,6 +6,7 @@ urlpatterns = [
     path('primary', views.primary, name='stewardshipProgram-primary'),
     path('preschool', views.preschool, name='stewardshipProgram-preschool'),
     path('toddler', views.toddler, name='stewardshipProgram-toddler'),
+    path('kidsCorner', views.kidsCorner, name='stewardshipProgram-kidsCorner'),
     path('resources', views.resources, name='stewardshipProgram-resources'),
 
 ]

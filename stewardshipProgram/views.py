@@ -35,5 +35,8 @@ def preschool(request):
 def toddler(request):
     return render(request, 'stewardshipProgram/toddler.html')
 
+def kidsCorner(request):
+    return render(request, 'stewardshipProgram/kidsCorner.html')
+
 def resources(request):
     return render(request, 'stewardshipProgram/resources.html')

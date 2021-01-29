@@ -14,6 +14,6 @@
   background: #cecece;
   border: solid 1px grey;
 }
-.carousel-inner .item {
+.carousel .carousel-inner .item {
    height: 200px;
 }
