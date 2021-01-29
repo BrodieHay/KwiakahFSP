@@ -3,32 +3,13 @@
 {% block carousel %}
 
 <link rel="stylesheet" href="{% static 'stewardshipProgram/books.css' %}">
-
-<div id="bookCarousel" class="carousel carousel-dark slide" data-bs-interval="false" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <indent>
-    {% static "" as baseUrl %}
-    {% for pictures in aHealthyForest %}
-        {% if forloop.first %}
-          <div class="carousel-item active">
-            <img src= "{{ baseURL }}/static/stewardshipProgram/images/lostSpiritBook/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-          </div>
-        {% else %}
-          <div class="carousel-item">
-            <img src= "{{ baseURL }}/static/stewardshipProgram/images/lostSpiritBook/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-          </div>
-        {% endif %}
-    {% endfor %}
-    </indent>
+<div class="container">
+  <div class="row">
+    <iframe src="https://scratch.mit.edu/projects/291903562/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
   </div>
-  <a class="carousel-control-prev" href="#bookCarousel" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#bookCarousel" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
+  <div class="row">
+    <iframe src="https://scratch.mit.edu/projects/334906070/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </div>
 </div>
 {% endblock carousel %}
 

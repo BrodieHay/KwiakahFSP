@@ -36,14 +36,7 @@ def toddler(request):
     return render(request, 'stewardshipProgram/toddler.html')
 
 def kidsCorner(request):
-    aHealthyForest.clear()
-    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
-        aHealthyForest.append(filename)
-    aHealthyForest.sort()
-    context = {
-        'aHealthyForest' : aHealthyForest,
-    }
-    return render(request, 'stewardshipProgram/kidsCorner.html', context)
+    return render(request, 'stewardshipProgram/kidsCorner.html')
 
 def resources(request):
     return render(request, 'stewardshipProgram/resources.html')
