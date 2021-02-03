@@ -34,6 +34,8 @@ def main():
         list.clear()
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
         aHealthyForest.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBookLiqwala'):
+        dirtAndRoots2.append(filename)        
     for list in booklist:
             list.sort()
 

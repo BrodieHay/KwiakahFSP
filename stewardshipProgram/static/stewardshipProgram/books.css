@@ -17,3 +17,20 @@
 .carousel .carousel-inner .item {
    height: 200px;
 }
+
+.nav .nav-link .color {
+  color: black;
+  background: white;
+  border: solid 1px grey;
+}
+
+.nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.nav .nav-link.active {
+  font-weight: 500;
+  color: grey;
+  background: #cecece;
+  border: solid 1px grey;
+}
