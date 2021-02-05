@@ -14,6 +14,18 @@ eyeHigh2 = []
 skyHigh1 = []
 skyHigh2 = []
 supportingBiodiversity = []
+aHealthyForestLiqwala = []
+dirtAndRoots1Liqwala = []
+dirtAndRoots2Liqwala = []
+forestFloor1Liqwala = []
+forestFloor2Liqwala = []
+kneeHigh1Liqwala = []
+kneeHigh2Liqwala = []
+eyeHigh1Liqwala = []
+eyeHigh2Liqwala = []
+skyHigh1Liqwala = []
+skyHigh2Liqwala = []
+supportingBiodiversityLiqwala = []
 booklist = [
     aHealthyForest,
     dirtAndRoots1,
@@ -27,6 +39,18 @@ booklist = [
     skyHigh1,
     skyHigh2,
     supportingBiodiversity,
+    aHealthyForestLiqwala,
+    dirtAndRoots1Liqwala,
+    dirtAndRoots2Liqwala,
+    forestFloor1Liqwala,
+    forestFloor2Liqwala,
+    kneeHigh1Liqwala,
+    kneeHigh2Liqwala,
+    eyeHigh1Liqwala,
+    eyeHigh2Liqwala,
+    skyHigh1Liqwala,
+    skyHigh2Liqwala,
+    supportingBiodiversityLiqwala,
 ]
 
 def main():
@@ -35,7 +59,7 @@ def main():
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
         aHealthyForest.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBookLiqwala'):
-        dirtAndRoots2.append(filename)        
+        aHealthyForestLiqwala.append(filename)
     for list in booklist:
             list.sort()
 
@@ -49,6 +73,7 @@ def primary(request):
     main()
     context = {
         'title':"Primary",
+        'urlPath' : "stewardshipProgram-primaryLiqwala",
         'aHealthyForest' : aHealthyForest,
         'dirtAndRoots2' : dirtAndRoots2,
         'forestFloor2' : forestFloor2,
@@ -56,10 +81,31 @@ def primary(request):
         'eyeHigh2' : eyeHigh2,
         'skyHigh2' : skyHigh2,
         'supportingBiodiversity' : supportingBiodiversity,
+        'directory' : "lostSpiritBook",
+        'language' : "Liq'wala",
+
+
 
     }
     return render(request, 'stewardshipProgram/primary.html', context)
 
+def primaryLiqwala(request):
+    main()
+    context = {
+        'title':"Primary-liq'wala",
+        'urlPath' : "stewardshipProgram-primary",
+        'aHealthyForest' : aHealthyForestLiqwala,
+        'dirtAndRoots2' : dirtAndRoots2Liqwala,
+        'forestFloor2' : forestFloor2Liqwala,
+        'kneeHigh2' : kneeHigh2Liqwala,
+        'eyeHigh2' : eyeHigh2Liqwala,
+        'skyHigh2' : skyHigh2Liqwala,
+        'supportingBiodiversity' : supportingBiodiversityLiqwala,
+        'directory' : "lostSpiritBookLiqwala",
+        'language' : "English",
+
+    }
+    return render(request, 'stewardshipProgram/primary.html', context)
 
 def preschool(request):
     main()

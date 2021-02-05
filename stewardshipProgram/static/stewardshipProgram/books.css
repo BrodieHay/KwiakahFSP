@@ -14,9 +14,6 @@
   background: #cecece;
   border: solid 1px grey;
 }
-.carousel .carousel-inner .item {
-   height: 200px;
-}
 
 .nav .nav-link .color {
   color: black;
