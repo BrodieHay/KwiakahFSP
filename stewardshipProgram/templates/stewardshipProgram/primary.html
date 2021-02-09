@@ -1,10 +1,9 @@
 {% extends "stewardshipProgram/books.html"%}
 {% load static %}
-{% block carousel %}
-
 <link rel="stylesheet" href="{% static 'stewardshipProgram/books.css' %}">
 
-<div id="bookCarousel" class="carousel carousel-dark slide" data-bs-interval="false" data-bs-ride="carousel">
+{% block aHealthyForest %}
+<div id="bookCarousel" class="carousel carousel-dark slide mt-1" data-bs-interval="false" data-bs-ride="carousel">
   <div class="carousel-inner">
     <indent>
     {% static "" as baseUrl %}
@@ -30,12 +29,38 @@
     <span class="visually-hidden">Next</span>
   </a>
 </div>
-{% endblock carousel %}
+{% endblock aHealthyForest %}
+
+{% block dirtAndRoots2 %}
+<div id="bookCarousel" class="carousel carousel-dark slide" data-bs-interval="false" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <indent>
+    {% static "" as baseUrl %}
+    {% for pictures in dirtAndRoots2 %}
+        {% if forloop.first %}
+          <div class="carousel-item active">
+            <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ directory }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
+          </div>
+        {% else %}
+          <div class="carousel-item">
+            <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ directory }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
+          </div>
+        {% endif %}
+    {% endfor %}
+    </indent>
+  </div>
+  <a class="carousel-control-prev" href="#bookCarousel" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#bookCarousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{% endblock dirtAndRoots2 %}
 
 {% block books %}
-  <div class="container-relative mt-1">
-    <a class="btn btn-secondary"  href="{% url urlPath  %}" role="button">{{language}}</a>
-  </div>
   <div class="row">
     <p class="text-center fs-1">What is Lorem Ipsum?</p>
     <p class="text-center fs-5"><code class="text-center fs-5 text-dark fw-bold">Lorem Ipsum</code> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
