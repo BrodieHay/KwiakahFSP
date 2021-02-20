@@ -14,18 +14,9 @@ eyeHigh2 = []
 skyHigh1 = []
 skyHigh2 = []
 supportingBiodiversity = []
-aHealthyForestLiqwala = []
-dirtAndRoots1Liqwala = []
-dirtAndRoots2Liqwala = []
-forestFloor1Liqwala = []
-forestFloor2Liqwala = []
-kneeHigh1Liqwala = []
-kneeHigh2Liqwala = []
-eyeHigh1Liqwala = []
-eyeHigh2Liqwala = []
-skyHigh1Liqwala = []
-skyHigh2Liqwala = []
-supportingBiodiversityLiqwala = []
+lostSpiritBook = []
+lostSpiritBookLiqwala = []
+directory = []
 booklist = [
     aHealthyForest,
     dirtAndRoots1,
@@ -39,19 +30,37 @@ booklist = [
     skyHigh1,
     skyHigh2,
     supportingBiodiversity,
+    lostSpiritBook,
+    lostSpiritBookLiqwala,
+
 ]
 
 def main():
     for list in booklist:
         list.clear()
-    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/aHealthyForest'):
         aHealthyForest.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/dirtAndRoots1'):
+        dirtAndRoots1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/forestFloor1'):
+        forestFloor1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/kneeHigh1'):
+        kneeHigh1.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
-        dirtAndRoots2.append(filename)
+        lostSpiritBook.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBookLiqwala'):
-        aHealthyForestLiqwala.append(filename)
+        lostSpiritBookLiqwala.append(filename)
     for list in booklist:
         list.sort()
+    directory = [   "aHealthyForest",
+                    "dirtAndRoots2",
+                    "forestFloor2",
+                    "kneeHigh2",
+                    "eyeHigh2",
+                    "skyHigh2",
+                    "supportingBiodiversity",
+                    ]
+
 
 def home(request):
     context = {
@@ -61,17 +70,21 @@ def home(request):
 
 def primary(request):
     main()
+
     context = {
         'title':"Primary",
         'aHealthyForest' : aHealthyForest,
-        'dirtAndRoots2' : dirtAndRoots2,
-        'forestFloor2' : forestFloor2,
-        'kneeHigh2' : kneeHigh2,
-        'eyeHigh2' : eyeHigh2,
-        'skyHigh2' : skyHigh2,
+        'dirtAndRoots' : dirtAndRoots1,
+        'forestFloor' : forestFloor1,
+        'kneeHigh' : kneeHigh1,
+        'eyeHigh' : eyeHigh2,
+        'skyHigh' : skyHigh2,
         'supportingBiodiversity' : supportingBiodiversity,
-        'directory' : "lostSpiritBook",
+        'directory' : directory,
+
     }
+    print("directory includes:")
+    print(directory)
     return render(request, 'stewardshipProgram/primary.html', context)
 
 def preschool(request):
@@ -99,11 +112,11 @@ def toddler(request):
     context = {
         'title':"Toddlers",
         'aHealthyForest' : aHealthyForest,
-        'dirtAndRoots1' : dirtAndRoots1,
-        'forestFloor1' : forestFloor1,
-        'kneeHigh1' : kneeHigh1,
-        'eyeHigh1' : eyeHigh1,
-        'skyHigh1' : skyHigh1,
+        'dirtAndRoots' : dirtAndRoots1,
+        'forestFloor' : forestFloor1,
+        'kneeHigh' : kneeHigh1,
+        'eyeHigh' : eyeHigh1,
+        'skyHigh' : skyHigh1,
         'supportingBiodiversity' : supportingBiodiversity,
     }
     return render(request, 'stewardshipProgram/toddler.html', context)
