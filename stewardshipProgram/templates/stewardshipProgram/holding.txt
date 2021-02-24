@@ -171,3 +171,10 @@
   </a>
 </div>
 {% endblock supportingBiodiversity %}
+
+
+<div class="tab-pane fade" id="nav-forestFloor" role="tabpanel" aria-labelledby="nav-forestFloor-tab">{% block forestFloor %}{% endblock forestFloor %}</div>
+<div class="tab-pane fade" id="nav-kneeHigh" role="tabpanel" aria-labelledby="nav-kneeHigh-tab">{% block kneeHigh %}{% endblock kneeHigh %}</div>
+<div class="tab-pane fade" id="nav-eyeHigh" role="tabpanel" aria-labelledby="nav-eyeHigh-tab">{% block eyeHigh %}{% endblock eyeHigh %}</div>
+<div class="tab-pane fade" id="nav-skyHigh" role="tabpanel" aria-labelledby="nav-skyHigh-tab">{% block skyHigh %}{% endblock skyHigh %}</div>
+<div class="tab-pane fade" id="nav-biodiversity" role="tabpanel" aria-labelledby="nav-biodiversity-tab">{% block supportingBiodiversity %}{% endblock supportingBiodiversity %}</div>

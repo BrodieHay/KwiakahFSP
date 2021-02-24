@@ -16,7 +16,6 @@ skyHigh2 = []
 supportingBiodiversity = []
 lostSpiritBook = []
 lostSpiritBookLiqwala = []
-directory = []
 booklist = [
     aHealthyForest,
     dirtAndRoots1,
@@ -42,24 +41,33 @@ def main():
         aHealthyForest.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/dirtAndRoots1'):
         dirtAndRoots1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/dirtAndRoots2'):
+        dirtAndRoots2.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/forestFloor1'):
         forestFloor1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/forestFloor2'):
+        forestFloor2.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/kneeHigh1'):
         kneeHigh1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/kneeHigh2'):
+        kneeHigh2.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/eyeHigh1'):
+        eyeHigh1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/eyeHigh2'):
+        eyeHigh2.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/skyHigh1'):
+        skyHigh1.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/skyHigh2'):
+        skyHigh2.append(filename)
+    for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/supportingBiodiversity'):
+        supportingBiodiversity.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
         lostSpiritBook.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBookLiqwala'):
         lostSpiritBookLiqwala.append(filename)
     for list in booklist:
         list.sort()
-    directory = [   "aHealthyForest",
-                    "dirtAndRoots2",
-                    "forestFloor2",
-                    "kneeHigh2",
-                    "eyeHigh2",
-                    "skyHigh2",
-                    "supportingBiodiversity",
-                    ]
+
 
 
 def home(request):
@@ -70,22 +78,31 @@ def home(request):
 
 def primary(request):
     main()
-
+    directoryName = [
+        aHealthyForest,
+        dirtAndRoots2,
+        forestFloor2,
+        kneeHigh2,
+        eyeHigh2,
+        skyHigh2,
+        supportingBiodiversity,
+    ]
+    directoryList = [
+        "aHealthyForest",
+        "dirtAndRoots2",
+        "forestFloor2",
+        "kneeHigh2",
+        "eyeHigh2",
+        "skyHigh2",
+        "supportingBiodiversity",
+    ]
+    zippedLists = zip(directoryName,directoryList)
     context = {
         'title':"Primary",
-        'aHealthyForest' : aHealthyForest,
-        'dirtAndRoots' : dirtAndRoots1,
-        'forestFloor' : forestFloor1,
-        'kneeHigh' : kneeHigh1,
-        'eyeHigh' : eyeHigh2,
-        'skyHigh' : skyHigh2,
-        'supportingBiodiversity' : supportingBiodiversity,
-        'directory' : directory,
+        "zippedList" : zippedLists,
 
     }
-    print("directory includes:")
-    print(directory)
-    return render(request, 'stewardshipProgram/primary.html', context)
+    return render(request, 'stewardshipProgram/books.html', context)
 
 def preschool(request):
     main()
