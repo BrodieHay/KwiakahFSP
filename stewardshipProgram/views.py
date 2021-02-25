@@ -78,6 +78,15 @@ def home(request):
 
 def primary(request):
     main()
+    tabName = [
+        "What is a Heathy Forest?",
+        "Dirt and Roots",
+        "The Forest Floor",
+        "Knee High",
+        "Eye High",
+        "Sky High",
+        "Supporting Biodiversity",
+    ]
     directoryName = [
         aHealthyForest,
         dirtAndRoots2,
@@ -96,47 +105,108 @@ def primary(request):
         "skyHigh2",
         "supportingBiodiversity",
     ]
+    zippedTabs = zip(tabName,directoryList)
     zippedLists = zip(directoryName,directoryList)
     context = {
         'title':"Primary",
-        "zippedList" : zippedLists,
+        'tabName' : zippedTabs,
+        'zippedList' : zippedLists,
 
     }
     return render(request, 'stewardshipProgram/books.html', context)
 
 def preschool(request):
     main()
+    tabName = [
+        "What is a Heathy Forest?",
+        "Dirt and Roots Level 1",
+        "Dirt and Roots Level 2",
+        "The Forest Floor Level 1",
+        "The Forest Floor Level 2",
+        "Knee High Level 1",
+        "Knee High Level 2",
+        "Eye High Level 1",
+        "Eye High Level 2",
+        "Sky High Level 1",
+        "Sky High Level 2",
+        "Supporting Biodiversity",
+    ]
+    directoryName = [
+        aHealthyForest,
+        dirtAndRoots1,
+        forestFloor1,
+        kneeHigh1,
+        eyeHigh1,
+        skyHigh1,
+        dirtAndRoots2,
+        forestFloor2,
+        kneeHigh2,
+        eyeHigh2,
+        skyHigh2,
+        supportingBiodiversity,
+    ]
+    directoryList = [
+        "aHealthyForest",
+        "dirtAndRoots1",
+        "forestFloor1",
+        "kneeHigh1",
+        "eyeHigh1",
+        "skyHigh1",
+        "dirtAndRoots2",
+        "forestFloor2",
+        "kneeHigh2",
+        "eyeHigh2",
+        "skyHigh2",
+        "supportingBiodiversity",
+    ]
+    zippedTabs = zip(tabName,directoryList)
+    zippedLists = zip(directoryName,directoryList)
     context = {
         'title':"Preschool",
-        'aHealthyForest' : aHealthyForest,
-        'dirtAndRoots1' : dirtAndRoots1,
-        'forestFloor1' : forestFloor1,
-        'kneeHigh1' : kneeHigh1,
-        'eyeHigh1' : eyeHigh1,
-        'skyHigh1' : skyHigh1,
-        'dirtAndRoots2' : dirtAndRoots2,
-        'forestFloor2' : forestFloor2,
-        'kneeHigh2' : kneeHigh2,
-        'eyeHigh2' : eyeHigh2,
-        'skyHigh2' : skyHigh2,
-        'supportingBiodiversity' : supportingBiodiversity,
+        'tabName' : zippedTabs,
+        'zippedList' : zippedLists,
 
     }
-    return render(request, 'stewardshipProgram/preschool.html', context)
+    return render(request, 'stewardshipProgram/books.html', context)
 
 def toddler(request):
     main()
+    tabName = [
+        "What is a Heathy Forest?",
+        "Dirt and Roots",
+        "The Forest Floor",
+        "Knee High",
+        "Eye High",
+        "Sky High",
+        "Supporting Biodiversity",
+    ]
+    directoryName = [
+        aHealthyForest,
+        dirtAndRoots1,
+        forestFloor1,
+        kneeHigh1,
+        eyeHigh1,
+        skyHigh1,
+        supportingBiodiversity,
+    ]
+    directoryList = [
+        "aHealthyForest",
+        "dirtAndRoots1",
+        "forestFloor1",
+        "kneeHigh1",
+        "eyeHigh1",
+        "skyHigh1",
+        "supportingBiodiversity",
+    ]
+    zippedTabs = zip(tabName,directoryList)
+    zippedLists = zip(directoryName,directoryList)
     context = {
-        'title':"Toddlers",
-        'aHealthyForest' : aHealthyForest,
-        'dirtAndRoots' : dirtAndRoots1,
-        'forestFloor' : forestFloor1,
-        'kneeHigh' : kneeHigh1,
-        'eyeHigh' : eyeHigh1,
-        'skyHigh' : skyHigh1,
-        'supportingBiodiversity' : supportingBiodiversity,
+        'title':"Toddler",
+        'tabName' : zippedTabs,
+        'zippedList' : zippedLists,
+
     }
-    return render(request, 'stewardshipProgram/toddler.html', context)
+    return render(request, 'stewardshipProgram/books.html', context)
 
 def kidsCorner(request):
     context = {

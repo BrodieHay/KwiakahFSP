@@ -6,22 +6,20 @@
 
 <div class="container-relative mt-1">
   <div class="nav nav-pills" id="nav-tab" role="tablist">
-    {%for dirlist in zippedList%}
+    {%for name in tabName%}
       {% if forloop.first %}
-        <a class="nav-link active" id="nav-{{ dirlist.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ dirlist.1 }}" role="tab" aria-controls="nav-{{ dirlist.1 }}" aria-selected="true">{{ dirlist.1 }}</a>
+        <a class="nav-link active" id="nav-{{ name.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ name.1 }}" role="tab" aria-controls="nav-{{ name.1 }}" aria-selected="true">{{ name.0 }}</a>
       {%else%}
-        <a class="nav-link" id="nav-{{ dirlist.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ dirlist.1 }}" role="tab" aria-controls="nav-{{ dirlist.1 }}" aria-selected="false">{{ dirlist.1 }}</a>
+        <a class="nav-link" id="nav-{{ name.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ name.1 }}" role="tab" aria-controls="nav-{{ name.1 }}" aria-selected="false">{{ name.0 }}</a>
       {%endif%}
     {%endfor%}
   </div>
   <div class="tab-content" id="nav-tabContent">
     {% static "" as baseUrl %}
     {%for dirlist in zippedList%}
-      <span>dirlist.0 is {{dirlist.0}}</span>
-      <span>dirlist.1 is {{dirlist.1}}</span>
       {% if forloop.first %}
         <div class="tab-pane fade show active" id="nav-{{ dirlist.1 }}" role="tabpanel" aria-labelledby="nav-{{ dirlist.1 }}-tab">
-          <div id="{{ dirlist.1 }}" class="carousel carousel-dark slide mt-1" data-bs-interval="false" data-bs-ride="carousel">
+          <div id="{{ dirlist.1 }}" class="carousel slide mt-1" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-inner">
               {% for pictures in dirlist.0 %}
                 {% if forloop.first %}
@@ -47,7 +45,7 @@
         </div>
       {% else %}
         <div class="tab-pane fade" id="nav-{{dirlist.1}}" role="tabpanel" aria-labelledby="nav-{{dirlist.1}}-tab">
-          <div id="{{ dirlist.1 }}" class="carousel carousel-dark slide mt-1" data-bs-interval="false" data-bs-ride="carousel">
+          <div id="{{ dirlist.1 }}" class="carousel slide mt-1" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-inner">
               {% for pictures in dirlist.0 %}
                 {% if forloop.first %}
