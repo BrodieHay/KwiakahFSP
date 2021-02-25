@@ -16,14 +16,31 @@ ul {
   background-color: #5f788a;
 }
 
-.site-header .navbar-nav .nav-link {
+.navbar-nav .nav-item .btn-lightSteel {
+  color: black;
+  background: #cecece;
+}
+
+.navbar-nav .nav-link {
   color: #cbd5db;
 }
 
-.site-header .navbar-nav .nav-link:hover {
+.navbar-nav .btn {
+  color: #cbd5db;
+}
+
+.navbar-nav .nav-link:hover {
   color: #ffffff;
 }
 
-.site-header .navbar-nav .nav-link.active {
+.navbar-nav .btn:hover {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.navbar-nav .btn.active {
   font-weight: 500;
 }
