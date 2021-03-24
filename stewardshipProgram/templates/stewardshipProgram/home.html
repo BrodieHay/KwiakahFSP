@@ -2,16 +2,16 @@
 {% block content %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'stewardshipProgram/main.css' %}">
+<link rel="stylesheet" href="{% static 'stewardshipProgram/home.css' %}">
 
-<div class=" bg-image p-4 text-center align-items-center"
+<div class=" bg-image p-4 mt-2 text-center align-items-center rounded"
    style="
      background-image: url('{% static 'stewardshipProgram/images/background.jpg' %}');
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
    ">
-   <div class="mask mt-4 mb-4 pt-2 pb-4" style="background-color: rgba(0, 0, 0, 0.3)">
+   <div class="mask mt-4 mb-4 pt-2 pb-4 rounded" style="background-color: rgba(0, 0, 0, 0.3)">
      <div class="d-flex justify-content-center align-items-center h-100">
        <div class="text-light">
          <h1 class="mt-3 text-light">Kwiakah First Nations</h1>
@@ -19,15 +19,41 @@
        </div>
      </div>
    </div>
- </div>
-  <div class="row">
-      <p class="text-center fs-1">What is Lorem Ipsum?</p>
-      <p class="text-center fs-5"><code class="text-center fs-5 text-dark fw-bold">Lorem Ipsum</code> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p class="text-center fs-1">Where does it come from?</p>
-      <p class="text-center fs-5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-      <p class="text-center fs-1">Why do we use it?</p>
-      <p class="text-center fs-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-
+</div>
+<div class="container">
+  <div class="row mt-2">
+    <div class="col-md-auto">
+      <figure class="figure">
+        <img src="{% static 'stewardshipProgram/images/grizzlyBear.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption text-center">Grizzly bear (nən)</figcaption>
+      </figure>
+    </div>
+    <div class="col">
+      <p class = "text-center fs-5">The Kwiakah First Nation is a First Nation in British Columbia, Canada. Our homeland is the Phillips River watershed on the coast of British Columbia. This watershed has great biodiversity and abounds with animals from grizzly bears (nən), cougars (mam̓isa) and mountain goats (məlx̌ƛu) to squirrels (təminas), mice (gigəy̓acaǧa) and raccoons (mayus). While there are still some stands of old growth forest, before logging companies came to our lands, all our forests were old growth, supporting ancient coniferous trees like Douglas fir (x̌ox̌m̓əs), Redcedar (wəlkʷ) and Hemlock (lox̌m̓əs). These trees can live hundreds of years and become giants in the forest. The cedar tree was most important to our Kwiakah ancestors. They relied on it for so many things, from diapers and cooking boxes to canoes and houses. The cedar tree provided for our ancestors and gave them great prosperity.</p>
+    </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <p class = "text-center fs-5">The Kwiakah First Nation is fighting to protect the Phillips watershed from further industrial logging and other industrial uses. Part of this includes teaching our young children about the forest and forest stewardship. Kwiakah people have long been forest stewards and we see this curriculum as a way to bring the forest to the classroom and children to the forest in a way that will build understanding around how the forest is a whole ecosystem, and that each part of the forest, from the soil to the treetops is important for a healthy forest. These are lessons for early forest stewards!</p>
+    </div>
+    <div class="col-md-auto">
+      <figure class="figure">
+        <img src="{% static 'stewardshipProgram/images/raccoon.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption text-center">raccoon (mayus)</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="row">
+    <p class = "text-center fs-5"></p>
+      <div class="col-md-auto">
+        <figure class="figure">
+          <img src="{% static 'stewardshipProgram/images/mountainGoat.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-center">mountain goat (məlx̌ƛu)</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <p class = "text-center fs-5">Our curriculum is divided into three age groups: 0-2 years; 3-5 years; and 6-9 years. Each year is divided into six parts and centres around books and visits to the forest. The intention is to encourage children at a young age to think about their role as stewards and caretakers of the forest, the importance of the forest ecosystem and the importance of biodiversity. We hope that through this program, children, their parents and their teachers will reconnect with the forest, laying the foundation for our future forest stewards who will understand the value of a forest as an ecosystem that supports all life. </p>
+      </div>
+  </div>
+</div>
 {% endblock content %}
