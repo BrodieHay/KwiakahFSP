@@ -31,3 +31,13 @@
   background: #cecece;
   border: solid 1px grey;
 }
+
+.img-fluid {
+  width:100%;
+  max-width:1150px;
+}
+
+.figure-img {
+  width:100%;
+  max-width:400px;
+}
