@@ -8,5 +8,5 @@ urlpatterns = [
     path('toddler', views.toddler, name='stewardshipProgram-toddler'),
     path('kidsCorner', views.kidsCorner, name='stewardshipProgram-kidsCorner'),
     path('resources', views.resources, name='stewardshipProgram-resources'),
-
+    path('contactUs',views.contactUs, name='stewardshipProgram-contactUs'),
 ]

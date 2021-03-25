@@ -81,7 +81,7 @@ def primary(request):
         'zippedList' : zippedLists,
 
     }
-    return render(request, 'stewardshipProgram/books.html', context)
+    return render(request, 'stewardshipProgram/primary.html', context)
 
 def preschool(request):
     main()
@@ -93,7 +93,7 @@ def preschool(request):
         'zippedList' : zippedLists,
 
     }
-    return render(request, 'stewardshipProgram/books.html', context)
+    return render(request, 'stewardshipProgram/preschool.html', context)
 
 def toddler(request):
     main()
@@ -105,7 +105,7 @@ def toddler(request):
         'zippedList' : zippedLists,
 
     }
-    return render(request, 'stewardshipProgram/books.html', context)
+    return render(request, 'stewardshipProgram/toddler.html', context)
 
 def kidsCorner(request):
     context = {
@@ -119,3 +119,9 @@ def resources(request):
         'title':"Resources",
     }
     return render(request, 'stewardshipProgram/resources.html', context)
+
+def contactUs(request):
+    context = {
+        'title':"Contact Us",
+    }
+    return render(request, 'stewardshipProgram/contactUs.html', context)
