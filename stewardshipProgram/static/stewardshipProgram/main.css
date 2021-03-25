@@ -44,3 +44,14 @@ ul {
 .navbar-nav .btn.active {
   font-weight: 500;
 }
+
+.footer .link {
+  color: #cbd5db;
+}
+
+.footer .link:hover {
+  color: #ffffff;
+}
+.footer .link.active {
+  font-weight: 500;
+}
