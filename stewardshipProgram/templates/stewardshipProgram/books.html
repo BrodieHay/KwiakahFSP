@@ -1,9 +1,12 @@
-{% extends "stewardshipProgram/base.html"%}
+{% extends "stewardshipProgram/main.html"%}
 {% block content %}
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'stewardshipProgram/books.css' %}">
-<div class="container">
+<div class="container-relative">
+  <div class="row mt-3">
+    {% block title %}{% endblock title %}
+  </div>
   <div class="row mt-2">
     <div class="col">
       <p class = "text-center fs-5">The Kwiakah Young Forest Stewards curriculum is designed to encourage infants and toddlers, preschool-aged children and primary school-aged children to explore the forest in a safe and fun way. It is meant to be used by teachers and parents who want to create opportunities for children to connect with the forest and to learn about the interconnections in the forest as a whole. In this way, we can work together to foster healthy forest stewardship.</p>
@@ -13,38 +16,19 @@
     <div class="col">
       <p class = "text-center fs-5">This project includes a book series and curriculum separated into three age groups with six levels per age group. Each age group begins with an introduction, "What is a Healthy Forest” followed by five levels with each level focussing on a different part or “level” of the forest from the soil to the treetops. We include field trip ideas, art projects and activities for each level for all age groups. There is a book that supports learning for each of the five levels of the forest: "Soil: A Healthy Forest Begins," "Forest Floor: New Life and Decay," "Knee High in the Forest: What Lives Here?," "Eye High in the Forest: Walking Among Giants" and "Sky High: A Bird’s-Eye View." There are also other learning materials such as card games and colouring sheets available on this website and there are a few games for the children to play on the computer or smart device. We encourage you to download the pdf files (curriculum sheets, books and activities) and to create a Young Forest Stewards binder or portfolio using these materials as a base.</p>
     </div>
-    <div class="col-md-auto">
-      <figure class="figure">
-        <img src="{% static 'stewardshipProgram/images/raccoon.jpg' %}" class="figure-img img-fluid rounded" alt="...">
-        <figcaption class="figure-caption text-center">raccoon (mayus)</figcaption>
-      </figure>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class = "text-center fs-5">To support learning and to facilitate field trips, you must find a forest that you can visit often, with space on the forest floor for you and your group to move around. The curriculum takes you on a journey to explore what the forest has to offer, collect items, document findings, create art work and learn about the forest in your area. You can choose a forest close by and if necessary, you can adapt the curriculum to a forested area in a park. Ideally, the area you choose is not a garden or groomed area, but is left to be a forest, with little human management.</p>
     </div>
   </div>
   <div class="row">
-    <p class = "text-center fs-5"></p>
-      <div class="col-md-auto">
-        <figure class="figure">
-          <img src="{% static 'stewardshipProgram/images/mountainGoat.jpg' %}" class="figure-img img-fluid rounded" alt="...">
-          <figcaption class="figure-caption text-center">mountain goat (məlx̌ƛu)</figcaption>
-        </figure>
-      </div>
-      <div class="col">
-        <p class = "text-center fs-5">To support learning and to facilitate field trips, you must find a forest that you can visit often, with space on the forest floor for you and your group to move around. The curriculum takes you on a journey to explore what the forest has to offer, collect items, document findings, create art work and learn about the forest in your area. You can choose a forest close by and if necessary, you can adapt the curriculum to a forested area in a park. Ideally, the area you choose is not a garden or groomed area, but is left to be a forest, with little human management.</p>
-      </div>
-  </div>
-  <div class="row">
-    <p class = "text-center fs-5"></p>
-      <div class="col">
-        <p class = "text-center fs-5">The curriculum is age appropriate and allows you to visit and learn over and over again and to build on what the children are learning at each age. In this curriculum, children are meant to get wet and dirty and to explore the forest with all of their senses. They might smell bark, taste soil, feel waxy leaves, hear the rain and wind, and see the birds and wind in the trees. They are meant to explore and to take quiet moments where they look closely at the soil under their feet or at the tree tops high above. At the end you and the children will have a better relationship with the forest, and hopefully fall in love with being in its surroundings.</p>
-      </div>
-      <div class="col-md-auto">
-        <figure class="figure">
-          <img src="{% static 'stewardshipProgram/images/grizzlyBear.jpg' %}" class="figure-img img-fluid rounded" alt="...">
-          <figcaption class="figure-caption text-center">Grizzly bear (nən)</figcaption>
-        </figure>
-      </div>
+    <div class="col">
+      <p class = "text-center fs-5">The curriculum is age appropriate and allows you to visit and learn over and over again and to build on what the children are learning at each age. In this curriculum, children are meant to get wet and dirty and to explore the forest with all of their senses. They might smell bark, taste soil, feel waxy leaves, hear the rain and wind, and see the birds and wind in the trees. They are meant to explore and to take quiet moments where they look closely at the soil under their feet or at the tree tops high above. At the end you and the children will have a better relationship with the forest, and hopefully fall in love with being in its surroundings.</p>
+    </div>
   </div>
 </div>
+
 <div class="container-relative mt-1">
   <div class="nav nav-pills" id="nav-tab" role="tablist">
     {%for name in tabName%}
@@ -113,6 +97,6 @@
       {%endif%}
     {%endfor%}
   </div>
+  {% block words %}{% endblock words %}
 </div>
-
 {% endblock content %}
