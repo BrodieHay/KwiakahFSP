@@ -13,9 +13,9 @@
 
     <meta charset="utf-8">
     {% if title %}
-      <title>Stewardship Program - {{title}}</title>
+      <title>Stewardship Curriculum - {{title}}</title>
     {% else %}
-      <title>Stewardship Program</title>
+      <title>Stewardship Curriculum</title>
     {% endif %}
     <title></title>
   </head>
@@ -41,6 +41,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'stewardshipProgram-toddler'%}">Toddlers</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'stewardshipProgram-resources'%}">Resources</a>
+            </li>
           </ul>
           <ul class="navbar-nav me-5">
             <li class="nav-item">
@@ -51,14 +54,21 @@
       </nav>
     </div>
     <div class="container">
-      {% block content %}{% endblock %}
+      <div class="row">
+        <img src="{% static 'stewardshipProgram/images/birdBanner.png' %}">
+      </div>
+      <div class="row">
+        {% block content %}{% endblock %}
+      </div>
+      <div class="row">
+        <img src="{% static 'stewardshipProgram/images/banner1.png' %}">
+      </div>
     </div>
   </body>
     <div class="container-relative">
-      <footer class="footer  mt-2 py-3 bg-steel">
+      <footer class="footer py-3 bg-steel">
           <div class="row">
             <div class="col d-flex justify-content-center">
-              <a class="link mx-1" href="{% url 'stewardshipProgram-resources'%}">Resources</a>
               <a class="link mx-1" href="{% url 'stewardshipProgram-contactUs'%}">Contact Us</a>
             </div>
           </div>
