@@ -21,7 +21,7 @@ booklist = [
 ]
 
 tabName = [
-    "What is a Heathy Forest?",
+    "Soil",
     "The Forest Floor",
     "Knee High",
     "Eye High",
