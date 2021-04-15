@@ -34,8 +34,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '0.0.0.0',
     'kwiakahfsp.herokuapp.com',
-    'tranquil-banana-eddzbm0zz66g60izltj8zg7q.herokudns.com'
-    'kwiakahfsp.ca'
+    'youngforeststewards.ca'
 ]
 
 
