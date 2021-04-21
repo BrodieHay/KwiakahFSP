@@ -25,10 +25,6 @@ ul {
   color: #cbd5db;
 }
 
-.dl {
-  color: #cbd5db;
-}
-
 .navbar-nav .btn {
   color: #cbd5db;
 }
@@ -58,4 +54,8 @@ ul {
 }
 .footer .link.active {
   font-weight: 500;
+}
+
+.footer .credits .p {
+  color: #cbd5db;
 }
