@@ -9,4 +9,6 @@ urlpatterns = [
     path('kidsCorner', views.kidsCorner, name='stewardshipProgram-kidsCorner'),
     path('resources', views.resources, name='stewardshipProgram-resources'),
     path('contactUs',views.contactUs, name='stewardshipProgram-contactUs'),
+    path('curriculumBackground',views.curriculumBackground, name='stewardshipProgram-curriculumBackground'),
+
 ]

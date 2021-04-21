@@ -110,6 +110,12 @@ def kidsCorner(request):
     }
     return render(request, 'stewardshipProgram/kidsCorner.html', context)
 
+def curriculumBackground(request):
+    context = {
+        'title':"Curriculum Background",
+    }
+    return render(request, 'stewardshipProgram/curriculumBackground.html', context)
+
 def resources(request):
     context = {
         'title':"Resources",
