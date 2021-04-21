@@ -28,86 +28,59 @@
     </div>
   </div>
 </div>
-{% block intro %}{% endblock intro %}
 <div class="container-relative mt-1">
   <div class="nav nav-pills" id="nav-tab" role="tablist">
     {%for name in tabName%}
       {% if forloop.first %}
-        <a class="nav-link active" id="nav-{{ name.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ name.1 }}" role="tab" aria-controls="nav-{{ name.1 }}" aria-selected="true">{{ name.0 }}</a>
-      {%else%}
-        <a class="nav-link" id="nav-{{ name.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ name.1 }}" role="tab" aria-controls="nav-{{ name.1 }}" aria-selected="false">{{ name.0 }}</a>
+        <a class="nav-link active" id="nav-intro-tab" data-bs-toggle="tab" href="#nav-intro" role="tab" aria-controls="nav-intro" aria-selected="true">Introduction</a>
       {%endif%}
+      <a class="nav-link" id="nav-{{ name.1 }}-tab" data-bs-toggle="tab" href="#nav-{{ name.1 }}" role="tab" aria-controls="nav-{{ name.1 }}" aria-selected="false">{{ name.0 }}</a>
     {%endfor%}
   </div>
   <div class="tab-content" id="nav-tabContent">
     {% static "" as baseUrl %}
     {%for dirlist in zippedList%}
       {% if forloop.first %}
-        <div class="tab-pane fade show active" id="nav-{{ dirlist.1 }}" role="tabpanel" aria-labelledby="nav-{{ dirlist.1 }}-tab">
-          <div id="{{ dirlist.1 }}" class="carousel slide mt-1 carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              {% for pictures in dirlist.0 %}
-                {% if forloop.first %}
-                  <div class="carousel-item active">
-                    <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-                  </div>
-                {% else %}
-                  <div class="carousel-item">
-                    <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-                  </div>
-                {% endif %}
-              {%endfor%}
-            </div>
-            <a class="carousel-control-prev" href="#{{ dirlist.1 }}" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#{{ dirlist.1 }}" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </a>
-          </div>
-          {% if dirlist.1 == "aHealthyForest" %}
-            {% block level1 %}{% endblock level1 %}
-          {%  endif %}
-        </div>
-      {% else %}
-        <div class="tab-pane fade" id="nav-{{dirlist.1}}" role="tabpanel" aria-labelledby="nav-{{dirlist.1}}-tab">
-          <div id="{{ dirlist.1 }}" class="carousel slide mt-1 carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              {% for pictures in dirlist.0 %}
-                {% if forloop.first %}
-                  <div class="carousel-item active">
-                    <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-                  </div>
-                {% else %}
-                  <div class="carousel-item">
-                    <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
-                  </div>
-                {% endif %}
-              {%endfor%}
-            </div>
-            <a class="carousel-control-prev" href="#{{ dirlist.1 }}" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#{{ dirlist.1 }}" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </a>
-          </div>
-          {% if dirlist.1 == "forestFloor" %}
-            {% block level2 %}{% endblock level2 %}
-          {% elif dirlist.1 == "kneeHigh" %}
-            {% block level3 %}{% endblock level3 %}
-          {% elif dirlist.1 == "eyeHigh" %}
-            {% block level4 %}{% endblock level4 %}
-          {% elif dirlist.1 == "skyHigh" %}
-            {% block level5 %}{% endblock level5 %}
-          {% endif %}
+        <div class="tab-pane fade show active" id="nav-intro" role="tabpanel" aria-labelledby="nav-intro-tab">
+          {% block intro %}{% endblock intro %}
         </div>
       {% endif %}
-    
+      <div class="tab-pane fade" id="nav-{{dirlist.1}}" role="tabpanel" aria-labelledby="nav-{{dirlist.1}}-tab">
+        <div id="{{ dirlist.1 }}" class="carousel slide mt-1 carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            {% for pictures in dirlist.0 %}
+              {% if forloop.first %}
+                <div class="carousel-item active">
+                  <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
+                </div>
+              {% else %}
+                <div class="carousel-item">
+                  <img src= "{{ baseURL }}/static/stewardshipProgram/images/{{ dirlist.1 }}/{{ pictures }}" class="img-fluid mx-auto d-block" alt="...">
+                </div>
+              {% endif %}
+            {%endfor%}
+          </div>
+          <a class="carousel-control-prev" href="#{{ dirlist.1 }}" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#{{ dirlist.1 }}" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+        {% if dirlist.1 == "aHealthyForest" %}
+          {% block level1 %}{% endblock level1 %}
+        {% elif dirlist.1 == "forestFloor" %}
+          {% block level2 %}{% endblock level2 %}
+        {% elif dirlist.1 == "kneeHigh" %}
+          {% block level3 %}{% endblock level3 %}
+        {% elif dirlist.1 == "eyeHigh" %}
+          {% block level4 %}{% endblock level4 %}
+        {% elif dirlist.1 == "skyHigh" %}
+          {% block level5 %}{% endblock level5 %}
+        {% endif %}
+      </div>
     {%endfor%}
   </div>
 </div>

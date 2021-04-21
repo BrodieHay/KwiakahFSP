@@ -56,10 +56,6 @@ def main():
         eyeHigh.append(filename)
     for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/skyHigh'):
         skyHigh.append(filename)
-    #for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBook'):
-    #    lostSpiritBook.append(filename)
-    #for filename in os.listdir(settings.BASE_DIR / 'stewardshipProgram/static/stewardshipProgram/images/lostSpiritBookLiqwala'):
-    #    lostSpiritBookLiqwala.append(filename)
     for list in booklist:
         list.sort()
 
