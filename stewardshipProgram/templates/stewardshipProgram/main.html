@@ -20,64 +20,81 @@
     <title></title>
   </head>
   <body>
-    <div class="container-relative">
-      <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-steel">
-        <a class="navbar-brand ms-5" href="{% url 'stewardshipProgram-home'%}">Kwiakah YFSC</a>
-        <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'stewardshipProgram-home'%}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'stewardshipProgram-curriculumBackground'%}">Curriculum Background</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'stewardshipProgram-primary'%}">Primary</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'stewardshipProgram-preschool'%}">Preschool</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'stewardshipProgram-toddler'%}">Toddlers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'stewardshipProgram-resources'%}">Resources</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav me-5">
-            <li class="nav-item">
-              <a class="btn btn-lightSteel"  href="{% url 'stewardshipProgram-kidsCorner'%}" role="button">Kid's Corner</a>
-            </li>
-          </ul>
+
+    <div class="bg-image text-center align-items-center"
+    style="
+      background-image: url('{% static 'stewardshipProgram/images/main_Background.jpg' %}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    ">
+      <div class="mask" style="background-color: rgba(0, 0, 0, .2)">
+        <div class="container-relative">
+          <nav class="navbar navbar-expand-sm navbar-dark sticky-top fs-5" style=" background-color:#3e6b4f;" id="mainNav">
+            <a class="navbar-brand ms-4" href="{% url 'stewardshipProgram-home'%}">
+              <img src="{% static 'stewardshipProgram/images/kwiakah_Logo.png' %}" alt="" width="100" height="100">
+            </a>
+            <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link {% block home %}{% endblock home %}" href="{% url 'stewardshipProgram-home'%}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% block currBack %}{% endblock currBack %}" href="{% url 'stewardshipProgram-curriculumBackground'%}">Curriculum Background</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% block primary %}{% endblock primary %}" href="{% url 'stewardshipProgram-primary'%}">Primary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% block preschool %}{% endblock preschool %}" href="{% url 'stewardshipProgram-preschool'%}">Preschool</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% block toddlers %}{% endblock toddlers %}" href="{% url 'stewardshipProgram-toddler'%}">Toddlers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% block resources %}{% endblock resources %}" href="{% url 'stewardshipProgram-resources'%}">Resources</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav me-5">
+                <li class="nav-item">
+                  <div class="mask rounded" style="background-color: rgba(138, 224, 138, 0.74);">
+                    <a class="nav-link fs-5 {% block kidsCorner %}{% endblock kidsCorner %}" style="color: black;"  href="{% url 'stewardshipProgram-kidsCorner'%}" role="button">Kid's Corner</a>
+                  </div>
+                </li>
+              </ul> 
+            </div>
+          </nav>
         </div>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="row">
-        <img src="{% static 'stewardshipProgram/images/birdBanner.png' %}">
-      </div>
-      <div class="row">
-        {% block content %}{% endblock %}
-      </div>
-      <div class="row">
-        <img src="{% static 'stewardshipProgram/images/banner1.png' %}">
+        <div class="container">
+          <div class="mask p-5" style="background-color: rgba(255, 255, 255, .75)">
+            <div class="row">
+              <img src="{% static 'stewardshipProgram/images/birdBanner.png' %}">
+            </div>
+            <div class="row">
+              {% block content %}{% endblock %}
+            </div>
+            <div class="row">
+              <img src="{% static 'stewardshipProgram/images/banner1.png' %}">
+            </div>
+          </div>
+        </div>  
       </div>
     </div>
   </body>
     <div class="container-relative">
-      <footer class="footer py-3 bg-steel">
+      <footer class="footer" style=" background-color:#3e6b4f;">
           <div class="row">
-            <div class="col d-flex justify-content-center">
-              <a class="link mx-1" href="{% url 'stewardshipProgram-contactUs'%}">Contact Us</a>
+            <div class="col mt-3 d-flex justify-content-center">
+              <a class="link fs-5 mx-1 {% block contactUs %}{% endblock contactUs %}" href="{% url 'stewardshipProgram-contactUs'%}">Contact Us</a>
             </div>
           </div>
           <div class="row">
             <div class="col d-flex justify-content-center" id="credits">
               <p class="text-center" style="color: #cbd5db">
-                <br><ins>Credits:</ins><br>
+                <br>Credits:<br>
                 Melanie Chickite - Curriculum Development<br>
                 Jessica Chickite - Artist<br>
                 Deidre Cullon - Project Lead<br>
